@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
+        {block:Description}
+            <meta name="description" content="{MetaDescription}" />
+        {/block:Description}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+        <link rel="stylesheet" href="//cloud.typography.com/6084432/761228/css/fonts.css" />
+        <link rel="stylesheet" href="http://stevecochrane.com/tumblr/tumblr-theme.css" />
+        <link rel="shortcut icon" type="image/ico" href="http://stevecochrane.com/favicon.ico" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/stevecochrane" />
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    <body id="index">
+        <div id="container">
+            <header>
+                <div>
+                    <h1><a href="/"><img src="http://stevecochrane.com/tumblr/images/header-banner.png" alt="{Title}" /></a></h1>
+                    <nav>
+                        <ul>
+                            <li id="nav-subscribe"><a href="http://feeds.feedburner.com/stevecochrane">Subscribe</a></li>
+                            <li id="nav-archive"><a href="/archive/">Archive</a></li>
+                            <li id="nav-twitter"><a href="http://twitter.com/stevecochrane">Twitter</a></li>
+                            <li id="nav-email"><a href="mailto:steve@stevecochrane.com">Email</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <span><span></span></span>
+            </header>
+            <div id="main" role="main">
+                <div id="intro" class="golden-section">
+                    <div class="golden-section-left"></div>
+                    <div class="golden-section-content">
+                        <p>Hi! I&apos;m <a href="http://stevecochrane.com">Steve Cochrane</a>, and this blog was a &ldquo;devlog&rdquo; of my experiences working on my videogame The Mountaineers, an NES-style platformer. Now I don&apos;t know what this is. Enjoy!</p>
+                        <p>Disclaimer: I am an employee of Blizzard Entertainment (specifically, a web engineer) and this is my personal blog. All thoughts and opinions are my own.</p>
+                    </div>
+                    <div class="golden-section-right"></div>
+                </div>
+                {block:Posts}
+                    <div class="golden-section">
+                        <div class="golden-section-left"></div>
+                        <div class="golden-section-content">
+                            {block:Regular}
+                                <article class="text">
+                                    <header>
+                                        {block:Date}
+                                            <ul>
+                                                <li class="date"><time><a href="{Permalink}">{Month} {DayOfMonth}{DayOfMonthSuffix}, {Year}<span></span></a></time></li>
+                                                <li class="notes"><a href="{Permalink}#notes">{NoteCountWithLabel}<span></span></a></li>
+                                                <li class="comments"><!-- Disqus part 1 --><a class="dsq-comment-count" href="{Permalink}#disqus_thread">Comments</a><!-- End Disqus part 1 --><span></span></li>
+                                            </ul>
+                                        {/block:Date}
+                                        {block:Title}<h1><a href="{Permalink}">{Title}</a></h1>{/block:Title}
+                                    </header>
+                                    {Body}
+                                </article>
+                            {/block:Regular}
+                            {block:Photo}
+                                <article class="photo">
+                                    <header>
+                                        {block:Date}
+                                            <ul>
+                                                <li class="date"><time><a href="{Permalink}">{Month} {DayOfMonth}{DayOfMonthSuffix}, {Year}<span></span></a></time></li>
+                                                <li class="notes"><a href="{Permalink}#notes">{NoteCountWithLabel}<span></span></a></li>
+                                                <li class="comments"><!-- Disqus part 1 --><a class="dsq-comment-count" href="{Permalink}#disqus_thread">Comments</a><!-- End Disqus part 1 --><span></span></li>
+                                            </ul>
+                                        {/block:Date}
+                                    </header>
+                                    {block:LinkURL}{LinkOpenTag}{/block:LinkURL}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" width="{PhotoWidth-HighRes}" height="{PhotoHeight-HighRes}" />{block:LinkURL}{LinkCloseTag}{/block:LinkURL}
+                                    {block:Caption}{Caption}{/block:Caption}
+                                </article>
+                            {/block:Photo}
+                            {block:Photoset}
+                                <article class="photoset">
+                                    <header>
+                                        {block:Date}
+                                            <ul>
+                                                <li class="date"><time><a href="{Permalink}">{Month} {DayOfMonth}{DayOfMonthSuffix}, {Year}<span></span></a></time></li>
+                                                <li class="notes"><a href="{Permalink}#notes">{NoteCountWithLabel}<span></span></a></li>
+                                                <li class="comments"><!-- Disqus part 1 --><a class="dsq-comment-count" href="{Permalink}#disqus_thread">Comments</a><!-- End Disqus part 1 --><span></span></li>
+                                            </ul>
+                                        {/block:Date}
+                                    </header>
+                                    {block:Photos}
+                                        {block:Caption}<div class="fig">{/block:Caption}
+                                        {block:LinkURL}{LinkOpenTag}{/block:LinkURL}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" width="{PhotoWidth-HighRes}" height="{PhotoHeight-HighRes}" />{block:LinkURL}{LinkCloseTag}{/block:LinkURL}
+                                        {block:Caption}<p>{Caption}</p></div>{/block:Caption}
+                                    {/block:Photos}
+                                    {block:Caption}{Caption}{/block:Caption}
+                                </article>
+                            {/block:Photoset}
+                            {block:Quote}
+                                <article class="quote">
+                                    <header>
+                                        {block:Date}
+                                            <ul>
+                                                <li class="date"><time><a href="{Permalink}">{Month} {DayOfMonth}{DayOfMonthSuffix}, {Year}<span></span></a></time></li>
+                                                <li class="notes"><a href="{Permalink}#notes">{NoteCountWithLabel}<span></span></a></li>
+                                                <li class="comments"><!-- Disqus part 1 --><a class="dsq-comment-count" href="{Permalink}#disqus_thread">Comments</a><!-- End Disqus part 1 --><span></span></li>
+                                            </ul>
+                                        {/block:Date}
+                                    </header>
+                                    <blockquote class="{Length}">
+                                        <p>{Quote}</p>
+                                    </blockquote>
+                                    {block:Source}<p><cite>&mdash;&nbsp;{Source}</cite></p>{/block:Source}
+                                </article>
+                            {/block:Quote}
+                            {block:Link}
+                                <article class="link">
+                                    <header>
+                                        {block:Date}
+                                            <ul>
+                                                <li class="date"><time><a href="{Permalink}">{Month} {DayOfMonth}{DayOfMonthSuffix}, {Year}<span></span></a></time></li>
+                                                <li class="notes"><a href="{Permalink}#notes">{NoteCountWithLabel}<span></span></a></li>
+                                                <li class="comments"><!-- Disqus part 1 --><a class="dsq-comment-count" href="{Permalink}#disqus_thread">Comments</a><!-- End Disqus part 1 --><span></span></li>
+                                            </ul>
+                                        {/block:Date}
+                                        <h1><a href="{URL}">{Name}</a></h1>
+                                    </header>
+                                    {block:Description}<p>{Description}</p>{/block:Description}
+                                </article>
+                            {/block:Link}
+                            {block:Conversation}
+                                <article class="conversation">
+                                    <header>
+                                        {block:Date}
+                                            <ul>
+                                                <li class="date"><time><a href="{Permalink}">{Month} {DayOfMonth}{DayOfMonthSuffix}, {Year}<span></span></a></time></li>
+                                                <li class="notes"><a href="{Permalink}#notes">{NoteCountWithLabel}<span></span></a></li>
+                                                <li class="comments"><!-- Disqus part 1 --><a class="dsq-comment-count" href="{Permalink}#disqus_thread">Comments</a><!-- End Disqus part 1 --><span></span></li>
+                                            </ul>
+                                        {/block:Date}
+                                        {block:Title}<h1><a href="{Permalink}">{Title}</a></h1>{/block:Title}
+                                    </header>
+                                    <ol>
+                                        {block:Lines}
+                                            <li class="{Alt}">{block:Label}<cite class="user_{UserNumber}">{Label}</cite>{/block:Label}<q>{Line}</q></li>
+                                        {/block:Lines}
+                                    </ol>
+                                </article>
+                            {/block:Conversation}
+                            {block:Audio}
+                                <article class="audio">
+                                    <header>
+                                        {block:Date}
+                                            <ul>
+                                                <li class="date"><time><a href="{Permalink}">{Month} {DayOfMonth}{DayOfMonthSuffix}, {Year}<span></span></a></time></li>
+                                                <li class="notes"><a href="{Permalink}#notes">{NoteCountWithLabel}<span></span></a></li>
+                                                <li class="comments"><!-- Disqus part 1 --><a class="dsq-comment-count" href="{Permalink}#disqus_thread">Comments</a><!-- End Disqus part 1 --><span></span></li>
+                                            </ul>
+                                        {/block:Date}
+                                    </header>
+                                    <div class="fig">
+                                        {AudioPlayerBlack}
+                                    </div>
+                                    {block:Caption}{Caption}{/block:Caption}
+                                </article>
+                            {/block:Audio}
+                            {block:Video}
+                                <article class="video">
+                                    <header>
+                                        {block:Date}
+                                            <ul>
+                                                <li class="date"><time><a href="{Permalink}">{Month} {DayOfMonth}{DayOfMonthSuffix}, {Year}<span></span></a></time></li>
+                                                <li class="notes"><a href="{Permalink}#notes">{NoteCountWithLabel}<span></span></a></li>
+                                                <li class="comments"><!-- Disqus part 1 --><a class="dsq-comment-count" href="{Permalink}#disqus_thread">Comments</a><!-- End Disqus part 1 --><span></span></li>
+                                            </ul>
+                                        {/block:Date}
+                                    </header>
+                                    <div class="fig">
+                                        {Video-400}
+                                    </div>
+                                    {block:Caption}{Caption}{/block:Caption}
+                                </article>
+                            {/block:Video}
+                            {block:IfShowNotes}{PostNotes}{/block:IfShowNotes}
+                        </div>
+                        <div class="golden-section-right"></div>
+                    </div>
+                {/block:Posts}
+                <!-- Disqus part 2 -->
+                    <script>
+                        var disqus_url = "{Permalink}";
+                        var disqus_title = "{block:PostTitle}{PostTitle}{/block:PostTitle}";
+                    </script>{block:Permalink}
+                    <div class="golden-section">
+                        <div class="golden-section-left"></div>
+                        <div class="golden-section-content">
+                            <div id="disqus_thread"></div>
+                        </div>
+                        <div class="golden-section-right"></div>
+                    </div>
+                    <script>
+                        /**
+                            var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread]
+                        */
+                        (function() {
+                            var dsq = document.createElement('script');
+                            dsq.type = 'text/javascript';
+                            dsq.async = true;
+                            dsq.src = 'http://stevecochrane.disqus.com/embed.js';
+                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                        })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=stevecochrane">comments powered by Disqus.</a></noscript>
+                    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>{/block:Permalink}
+                    <script>
+                        var disqus_shortname = 'stevecochrane';
+                        (function () {
+                            var s = document.createElement('script');
+                            s.async = true;
+                            s.src = 'http://stevecochrane.disqus.com/count.js';
+                            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+                        }());
+                    </script>
+                <!-- End Disqus part 2-->
+                {block:PostNotes}
+                    <div class="golden-section">
+                        <div class="golden-section-left"></div>
+                        <div class="golden-section-content">
+                            <div id="notes">
+                                {PostNotes-64}
+                            </div>
+                        </div>
+                        <div class="golden-section-right"></div>
+                    </div>
+                {/block:PostNotes}
+                {block:Pagination}
+                    <div id="post-nav">
+                        {block:NextPage}<p id="previous"><a href="{NextPage}"><img src="http://stevecochrane.com/tumblr/images/page-nav-previous.png" alt="Older entries"></a></p>{/block:NextPage}
+                        {block:PreviousPage}<p id="next"><a href="{PreviousPage}"><img src="http://stevecochrane.com/tumblr/images/page-nav-next.png" alt="Newer entries"></a></p>{/block:PreviousPage}
+                    </div>
+                {/block:Pagination}
+                {block:PermalinkPagination}
+                    <div id="post-nav">
+                        {block:NextPost}<p id="next"><a href="{NextPost}"><img src="http://stevecochrane.com/tumblr/images/page-nav-next.png" alt="Next entry"></a></p>{/block:NextPost}
+                        {block:PreviousPost}<p id="previous"><a href="{PreviousPost}"><img src="http://stevecochrane.com/tumblr/images/page-nav-previous.png" alt="Previous entry"></a></p>{/block:PreviousPost}
+                    </div>
+                {/block:PermalinkPagination}
+            </div>
+            <footer>
+                <div>
+                    <div class="golden-section">
+                        <div class="golden-section-left"></div>
+                        <div class="golden-section-content">
+                            <p>Made with <a href="http://panic.com/coda/">Coda</a>. <a href="http://www.typography.com/fonts/sentinel/overview/">Sentinel</a> and <a href="http://www.typography.com/fonts/ideal-sans/overview/">Ideal Sans</a> fonts provided by <a href="http://www.typography.com/cloud/welcome/">Hoefler & Co.</a> Powered by <a href="http://tumblr.com/">Tumblr</a>.<br />Backgrounds <a href="http://stevecochrane.com/tumblr/images/paper.png">1</a> and <a href="http://stevecochrane.com/tumblr/images/red-fabric.png">2</a> modified from originals on <a href="http://subtlepatterns.com">Subtle Patterns</a> under <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons</a> license.<br/>Copyright &copy; {CopyrightYears} <a href="http://stevecochrane.com">Steve Cochrane</a> unless otherwise noted. All rights reserved.</p>
+                        </div>
+                        <div class="golden-section-right"></div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script>
+            /*
+                From "How to Track Downloads & Outbound Links in Google Analytics":
+                http://www.blastam.com/blog/index.php/2013/03/how-to-track-downloads-in-google-analytics-v2/
+
+                This timeout method breaks Cmd + click to open in a new tab for Safari (and possibly others)
+                so I've disabled tracking for everything except downloads since that's all I'm trying for.
+            */
+            if (typeof jQuery != 'undefined') {
+                jQuery(document).ready(function($) {
+                    var filetypes = /\.(zip|exe|dmg|pdf|doc.*|xls.*|ppt.*|mp3|txt|rar|wma|mov|avi|wmv|flv|wav)$/i;
+                    var baseHref = '';
+                    if (jQuery('base').attr('href') != undefined) baseHref = jQuery('base').attr('href');
+
+                    jQuery('a').on('click', function(event) {
+                        var el = jQuery(this);
+                        var track = true;
+                        var href = (typeof(el.attr('href')) != 'undefined' ) ? el.attr('href') :"";
+                        var isThisDomain = href.match(document.domain.split('.').reverse()[1] + '.' + document.domain.split('.').reverse()[0]);
+                        if (!href.match(/^javascript:/i)) {
+                            var elEv = []; elEv.value=0, elEv.non_i=false;
+                            if (href.match(/^mailto\:/i)) {
+/*
+                                elEv.category = "email";
+                                elEv.action = "click";
+                                elEv.label = href.replace(/^mailto\:/i, '');
+                                elEv.loc = href;
+*/
+                                track = false;
+                            }
+                            else if (href.match(filetypes)) {
+                                var extension = (/[.]/.exec(href)) ? /[^.]+$/.exec(href) : undefined;
+                                elEv.category = "download";
+                                elEv.action = "click-" + extension[0];
+                                elEv.label = href.replace(/ /g,"-");
+                                elEv.loc = baseHref + href;
+                            }
+                            else if (href.match(/^https?\:/i) && !isThisDomain) {
+/*
+                                elEv.category = "external";
+                                elEv.action = "click";
+                                elEv.label = href.replace(/^https?\:\/\//i, '');
+                                elEv.non_i = true;
+                                elEv.loc = href;
+*/
+                                track = false;
+                            }
+                            else if (href.match(/^tel\:/i)) {
+/*
+                                elEv.category = "telephone";
+                                elEv.action = "click";
+                                elEv.label = href.replace(/^tel\:/i, '');
+                                elEv.loc = href;
+*/
+                                track = false;
+                            }
+                            else track = false;
+
+                            if (track) {
+                                _gaq.push(['_trackEvent', elEv.category.toLowerCase(), elEv.action.toLowerCase(), elEv.label.toLowerCase(), elEv.value, elEv.non_i]);
+                                if ( el.attr('target') == undefined || el.attr('target').toLowerCase() != '_blank') {
+                                    setTimeout(function() { location.href = elEv.loc; }, 400);
+                                    return false;
+                                }
+                            }
+                        }
+                    });
+                });
+            }
+        </script>
+        <script>
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-23677473-1']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+    </body>
+</html>

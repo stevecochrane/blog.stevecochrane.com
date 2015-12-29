@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
+        <title>{block:PostSummary}{PlaintextPostSummary} - {/block:PostSummary}{Title}</title>
         <meta name="description" content="{MetaDescription}" />
         <meta name="author" content="Steve Cochrane" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
@@ -12,7 +12,7 @@
         {/block:IndexPage}
         {block:PermalinkPage}
             <meta property="og:url" content="{Permalink}" />
-            <meta property="og:title" content="{block:PostSummary}{PostSummary}{/block:PostSummary}" />
+            <meta property="og:title" content="{block:PostSummary}{PlaintextPostSummary}{/block:PostSummary}" />
         {/block:PermalinkPage}
         <meta property="og:description" content="{MetaDescription}" />
         <meta property="og:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
@@ -23,7 +23,7 @@
             <meta name="twitter:title" content="{Title}" />
         {/block:IndexPage}
         {block:PermalinkPage}
-            <meta name="twitter:title" content="{block:PostSummary}{PostSummary}{/block:PostSummary}" />
+            <meta name="twitter:title" content="{block:PostSummary}{PlaintextPostSummary}{/block:PostSummary}" />
         {/block:PermalinkPage}
         <meta name="twitter:description" content="{MetaDescription}" />
         <meta name="twitter:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />

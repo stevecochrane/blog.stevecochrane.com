@@ -3,13 +3,50 @@
     <head>
         <meta charset="utf-8" />
         <title>{block:PostSummary}{PlaintextPostSummary} - {/block:PostSummary}{Title}</title>
+        <meta name="author" content="Steve Cochrane" />
         {block:IndexPage}
             <meta name="description" content="{MetaDescription}" />
         {/block:IndexPage}
         {block:PermalinkPage}
-            <meta name="description" content="{PlaintextBody}" />
+            {block:Posts}
+                {block:Regular}
+                    <meta name="description" content="{PlaintextBody}" />
+                {/block:Regular}
+                {block:Photo}
+                    {block:Caption}
+                        <meta name="description" content="{PlaintextCaption}" />
+                    {/block:Caption}
+                {/block:Photo}
+                {block:Photoset}
+                    {block:Caption}
+                        <meta name="description" content="{PlaintextCaption}" />
+                    {/block:Caption}
+                {/block:Photoset}
+                {block:Quote}
+                    {block:Source}
+                        <meta name="description" content="{PlaintextSource}" />
+                    {/block:Source}
+                {/block:Quote}
+                {block:Link}
+                    {block:Description}
+                        <meta name="description" content="{PlaintextDescription}" />
+                    {/block:Description}
+                {/block:Link}
+                {block:Chat}
+                    <meta name="description" content="{block:Lines}{block:Label}{Label}: {/block:Label}{Line} &bull; {/block:Lines}" />
+                {/block:Chat}
+                {block:Audio}
+                    {block:Caption}
+                        <meta name="description" content="{PlaintextCaption}" />
+                    {/block:Caption}
+                {/block:Audio}
+                {block:Video}
+                    {block:Caption}
+                        <meta name="description" content="{PlaintextCaption}" />
+                    {/block:Caption}
+                {/block:Video}
+            {/block:Posts}
         {/block:PermalinkPage}
-        <meta name="author" content="Steve Cochrane" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
         {block:IndexPage}
             <meta property="og:url" content="{BlogURL}" />
@@ -19,10 +56,47 @@
         {block:PermalinkPage}
             <meta property="og:url" content="{Permalink}" />
             <meta property="og:title" content="{block:PostSummary}{PlaintextPostSummary}{/block:PostSummary}" />
-            <meta property="og:description" content="{PlaintextBody}" />
+            {block:Posts}
+                {block:Regular}
+                    <meta property="og:description" content="{PlaintextBody}" />
+                {/block:Regular}
+                {block:Photo}
+                    {block:Caption}
+                        <meta property="og:description" content="{PlaintextCaption}" />
+                    {/block:Caption}
+                {/block:Photo}
+                {block:Photoset}
+                    {block:Caption}
+                        <meta property="og:description" content="{PlaintextCaption}" />
+                    {/block:Caption}
+                {/block:Photoset}
+                {block:Quote}
+                    {block:Source}
+                        <meta property="og:description" content="{PlaintextSource}" />
+                    {/block:Source}
+                {/block:Quote}
+                {block:Link}
+                    {block:Description}
+                        <meta property="og:description" content="{PlaintextDescription}" />
+                    {/block:Description}
+                {/block:Link}
+                {block:Chat}
+                    <meta property="og:description" content="{block:Lines}{block:Label}{Label}: {/block:Label}{Line} &bull; {/block:Lines}" />
+                {/block:Chat}
+                {block:Audio}
+                    {block:Caption}
+                        <meta property="og:description" content="{PlaintextCaption}" />
+                    {/block:Caption}
+                {/block:Audio}
+                {block:Video}
+                    {block:Caption}
+                        <meta property="og:description" content="{PlaintextCaption}" />
+                    {/block:Caption}
+                {/block:Video}
+            {/block:Posts}
         {/block:PermalinkPage}
-        <meta property="og:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
         <meta property="og:site_name" content="{Title}" />
+        <meta property="og:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@stevecochrane" />
         {block:IndexPage}
@@ -31,7 +105,44 @@
         {/block:IndexPage}
         {block:PermalinkPage}
             <meta name="twitter:title" content="{block:PostSummary}{PlaintextPostSummary}{/block:PostSummary}" />
-            <meta name="twitter:description" content="{PlaintextBody}" />
+            {block:Posts}
+                {block:Regular}
+                    <meta name="twitter:description" content="{PlaintextBody}" />
+                {/block:Regular}
+                {block:Photo}
+                    {block:Caption}
+                        <meta name="twitter:description" content="{PlaintextCaption}" />
+                    {/block:Caption}
+                {/block:Photo}
+                {block:Photoset}
+                    {block:Caption}
+                        <meta name="twitter:description" content="{PlaintextCaption}" />
+                    {/block:Caption}
+                {/block:Photoset}
+                {block:Quote}
+                    {block:Source}
+                        <meta name="twitter:description" content="{PlaintextSource}" />
+                    {/block:Source}
+                {/block:Quote}
+                {block:Link}
+                    {block:Description}
+                        <meta name="twitter:description" content="{PlaintextDescription}" />
+                    {/block:Description}
+                {/block:Link}
+                {block:Chat}
+                    <meta name="twitter:description" content="{block:Lines}{block:Label}{Label}: {/block:Label}{Line} &bull; {/block:Lines}" />
+                {/block:Chat}
+                {block:Audio}
+                    {block:Caption}
+                        <meta name="twitter:description" content="{PlaintextCaption}" />
+                    {/block:Caption}
+                {/block:Audio}
+                {block:Video}
+                    {block:Caption}
+                        <meta name="twitter:description" content="{PlaintextCaption}" />
+                    {/block:Caption}
+                {/block:Video}
+            {/block:Posts}
         {/block:PermalinkPage}
         <meta name="twitter:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
         <link rel="stylesheet" href="//cloud.typography.com/6084432/761228/css/fonts.css" />
@@ -152,7 +263,7 @@
                                     {block:Description}<p>{Description}</p>{/block:Description}
                                 </article>
                             {/block:Link}
-                            {block:Conversation}
+                            {block:Chat}
                                 <article class="conversation">
                                     <header>
                                         {block:Date}
@@ -170,7 +281,7 @@
                                         {/block:Lines}
                                     </ol>
                                 </article>
-                            {/block:Conversation}
+                            {/block:Chat}
                             {block:Audio}
                                 <article class="audio">
                                     <header>

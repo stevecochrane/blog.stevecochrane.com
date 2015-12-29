@@ -52,6 +52,7 @@
             <meta property="og:url" content="{BlogURL}" />
             <meta property="og:title" content="{Title}" />
             <meta property="og:description" content="{MetaDescription}" />
+            <meta property="og:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
         {/block:IndexPage}
         {block:PermalinkPage}
             <meta property="og:url" content="{Permalink}" />
@@ -59,92 +60,111 @@
             {block:Posts}
                 {block:Regular}
                     <meta property="og:description" content="{PlaintextBody}" />
+                    <meta property="og:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
                 {/block:Regular}
                 {block:Photo}
                     {block:Caption}
                         <meta property="og:description" content="{PlaintextCaption}" />
                     {/block:Caption}
+                    <meta property="og:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
                 {/block:Photo}
                 {block:Photoset}
                     {block:Caption}
                         <meta property="og:description" content="{PlaintextCaption}" />
                     {/block:Caption}
+                    <meta property="og:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
                 {/block:Photoset}
                 {block:Quote}
                     {block:Source}
                         <meta property="og:description" content="{PlaintextSource}" />
                     {/block:Source}
+                    <meta property="og:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
                 {/block:Quote}
                 {block:Link}
                     {block:Description}
                         <meta property="og:description" content="{PlaintextDescription}" />
                     {/block:Description}
+                    <meta property="og:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
                 {/block:Link}
                 {block:Chat}
                     <meta property="og:description" content="{block:Lines}{block:Label}{Label}: {/block:Label}{Line} &bull; {/block:Lines}" />
+                    <meta property="og:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
                 {/block:Chat}
                 {block:Audio}
                     {block:Caption}
                         <meta property="og:description" content="{PlaintextCaption}" />
                     {/block:Caption}
+                    <meta property="og:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
                 {/block:Audio}
                 {block:Video}
                     {block:Caption}
                         <meta property="og:description" content="{PlaintextCaption}" />
                     {/block:Caption}
+                    {block:VideoThumbnail}
+                        <meta property="og:image" content="{VideoThumbnailURL}" />
+                    {/block:VideoThumbnail}
                 {/block:Video}
             {/block:Posts}
         {/block:PermalinkPage}
         <meta property="og:site_name" content="{Title}" />
-        <meta property="og:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@stevecochrane" />
         {block:IndexPage}
             <meta name="twitter:title" content="{Title}" />
             <meta name="twitter:description" content="{MetaDescription}" />
+            <meta name="twitter:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
         {/block:IndexPage}
         {block:PermalinkPage}
             <meta name="twitter:title" content="{block:PostSummary}{PlaintextPostSummary}{/block:PostSummary}" />
             {block:Posts}
                 {block:Regular}
                     <meta name="twitter:description" content="{PlaintextBody}" />
+                    <meta name="twitter:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
                 {/block:Regular}
                 {block:Photo}
                     {block:Caption}
                         <meta name="twitter:description" content="{PlaintextCaption}" />
                     {/block:Caption}
+                    <meta name="twitter:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
                 {/block:Photo}
                 {block:Photoset}
                     {block:Caption}
                         <meta name="twitter:description" content="{PlaintextCaption}" />
                     {/block:Caption}
+                    <meta name="twitter:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
                 {/block:Photoset}
                 {block:Quote}
                     {block:Source}
                         <meta name="twitter:description" content="{PlaintextSource}" />
                     {/block:Source}
+                    <meta name="twitter:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
                 {/block:Quote}
                 {block:Link}
                     {block:Description}
                         <meta name="twitter:description" content="{PlaintextDescription}" />
                     {/block:Description}
+                    <meta name="twitter:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
                 {/block:Link}
                 {block:Chat}
                     <meta name="twitter:description" content="{block:Lines}{block:Label}{Label}: {/block:Label}{Line} &bull; {/block:Lines}" />
+                    <meta name="twitter:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
                 {/block:Chat}
                 {block:Audio}
                     {block:Caption}
                         <meta name="twitter:description" content="{PlaintextCaption}" />
                     {/block:Caption}
+                    <meta name="twitter:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
                 {/block:Audio}
                 {block:Video}
                     {block:Caption}
                         <meta name="twitter:description" content="{PlaintextCaption}" />
                     {/block:Caption}
+                    {block:VideoThumbnail}
+                        <meta name="twitter:image" content="{VideoThumbnailURL}" />
+                    {/block:VideoThumbnail}
                 {/block:Video}
             {/block:Posts}
         {/block:PermalinkPage}
-        <meta name="twitter:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
         <link rel="stylesheet" href="//cloud.typography.com/6084432/761228/css/fonts.css" />
         <link rel="stylesheet" href="http://stevecochrane.com/tumblr/tumblr-theme.css" />
         <link rel="shortcut icon" type="image/ico" href="http://stevecochrane.com/favicon.ico" />

@@ -9,9 +9,9 @@
         {/block:IndexPage}
         {block:PermalinkPage}
             {block:Posts}
-                {block:Regular}
+                {block:Text}
                     <meta name="description" content="{PlaintextBody}" />
-                {/block:Regular}
+                {/block:Text}
                 {block:Photo}
                     {block:Caption}
                         <meta name="description" content="{PlaintextCaption}" />
@@ -58,10 +58,10 @@
             <meta property="og:url" content="{Permalink}" />
             <meta property="og:title" content="{block:PostSummary}{PlaintextPostSummary}{/block:PostSummary}" />
             {block:Posts}
-                {block:Regular}
+                {block:Text}
                     <meta property="og:description" content="{PlaintextBody}" />
                     <meta property="og:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
-                {/block:Regular}
+                {/block:Text}
                 {block:Photo}
                     {block:Caption}
                         <meta property="og:description" content="{PlaintextCaption}" />
@@ -119,10 +119,10 @@
         {block:PermalinkPage}
             <meta name="twitter:title" content="{block:PostSummary}{PlaintextPostSummary}{/block:PostSummary}" />
             {block:Posts}
-                {block:Regular}
+                {block:Text}
                     <meta name="twitter:description" content="{PlaintextBody}" />
                     <meta name="twitter:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
-                {/block:Regular}
+                {/block:Text}
                 {block:Photo}
                     {block:Caption}
                         <meta name="twitter:description" content="{PlaintextCaption}" />
@@ -206,7 +206,7 @@
                     <div class="golden-section">
                         <div class="golden-section-left"></div>
                         <div class="golden-section-content">
-                            {block:Regular}
+                            {block:Text}
                                 <article class="text">
                                     <header>
                                         {block:Date}
@@ -220,7 +220,7 @@
                                     </header>
                                     {Body}
                                 </article>
-                            {/block:Regular}
+                            {/block:Text}
                             {block:Photo}
                                 <article class="photo">
                                     <header>

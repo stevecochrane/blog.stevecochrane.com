@@ -102,7 +102,9 @@
                     {block:Caption}
                         <meta property="og:description" content="{PlaintextCaption}" />
                     {/block:Caption}
-                    <meta property="og:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
+                    {block:AlbumArt}
+                        <meta property="og:image" content="{AlbumArtURL}" />
+                    {/block:AlbumArt}
                 {/block:Audio}
                 {block:Video}
                     {block:Caption}
@@ -169,7 +171,9 @@
                     {block:Caption}
                         <meta name="twitter:description" content="{PlaintextCaption}" />
                     {/block:Caption}
-                    <meta name="twitter:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
+                    {block:AlbumArt}
+                        <meta name="twitter:image" content="{AlbumArtURL}" />
+                    {/block:AlbumArt}
                 {/block:Audio}
                 {block:Video}
                     {block:Caption}

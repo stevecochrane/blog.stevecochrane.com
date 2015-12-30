@@ -74,7 +74,11 @@
                     {block:Caption}
                         <meta property="og:description" content="{PlaintextCaption}" />
                     {/block:Caption}
-                    <meta property="og:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
+                    {block:Photos}
+                        {block:HighRes}
+                            <meta property="og:image" content="{PhotoURL-HighRes}" />
+                        {/block:HighRes}
+                    {/block:Photos}
                 {/block:Photoset}
                 {block:Quote}
                     {block:Source}
@@ -137,7 +141,11 @@
                     {block:Caption}
                         <meta name="twitter:description" content="{PlaintextCaption}" />
                     {/block:Caption}
-                    <meta name="twitter:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
+                    {block:Photos}
+                        {block:HighRes}
+                            <meta name="twitter:image" content="{PhotoURL-HighRes}" />
+                        {/block:HighRes}
+                    {/block:Photos}
                 {/block:Photoset}
                 {block:Quote}
                     {block:Source}

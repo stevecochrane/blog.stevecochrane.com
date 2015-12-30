@@ -66,15 +66,15 @@
                     {block:Caption}
                         <meta property="og:description" content="{PlaintextCaption}" />
                     {/block:Caption}
-                    <meta property="og:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
+                    {block:HighRes}
+                        <meta property="og:image" content="{PhotoURL-HighRes}" />
+                    {/block:HighRes}
                 {/block:Photo}
                 {block:Photoset}
                     {block:Caption}
                         <meta property="og:description" content="{PlaintextCaption}" />
                     {/block:Caption}
-                    {block:HighRes}
-                        <meta property="og:image" content="{PhotoURL-HighRes}" />
-                    {/block:HighRes}
+                    <meta property="og:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
                 {/block:Photoset}
                 {block:Quote}
                     {block:Source}

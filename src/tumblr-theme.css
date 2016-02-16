@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -11,8 +11,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -23,7 +23,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -74,7 +74,7 @@ header + h4,
 img + .fig,
 .fig + img,
 .quote blockquote + p {
-	margin-top: 1.875em; /* 30 / 16 */	
+	margin-top: 1.875em; /* 30 / 16 */
 }
 p + blockquote,
 blockquote + p,
@@ -197,7 +197,7 @@ nav ul {
 nav li {
 	float: left;
 	font-size: 0.875em; /* 14 / 16 */
-	font-weight: bold;	
+	font-weight: bold;
 	line-height: 2.142857em; /* 30 / 14 */
 	list-style: none;
 	padding-left: 2.142857em; /* 30 / 14 */
@@ -277,29 +277,18 @@ article header .notes a {
 article header .comments a {
     padding-left: 1.857143em; /* 26 / 14 */
 }
-article header li span {
-    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAtUlEQVR42p2SQQrCMBBFE1zlAD2G9DDtSnAr5ABeIB7KA7iNxKtE6bbxCz8ydAxICm+RmXllMhlTSvmCbwABJPAiibFB1kppAtla+zksIJKFsQwmKVZpBU/ggRM/dMAzt1a5tpeZGIWwB2dxHlmT6ZgLW/Gb+x7AbRPzrA3APHgn94foWJsMJxeZ1KKORzpNca45cBXxexVTo9UdOIITmH+1GuRwFO3h6OfQ6OfoXYD+lete8jdsuS3g8b4BGgAAAABJRU5ErkJggg%3D%3D) no-repeat 0 50%; /* ../images/icon-clock.png */
-    display: block;
-    height: 2.142857em; /* 30 / 14 */
+.icon {
+    background-color: transparent;
+    fill: currentColor;
+}
+.icon-16 {
+    height: 16px;
+    width: 16px;
+}
+article header .icon {
     left: 0;
-    opacity: 0.3;
     position: absolute;
     top: 0;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    transition: all 0.2s;
-    width: 1em; /* 14 / 14 */
-}
-article header .notes span {
-    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAMCAYAAABr5z2BAAAAp0lEQVR42p3RsQrCQAzG8axCJ99AKLj2MVx9DMFVEATBVRCETp2cXF1dfQNXV1cnodNBIf1zcBDKFUoCvyzJd8NFVFWoCi8EKDpcmKX5ES0UAU+UcUbN8YNm7HAfmX1RQPZQpw3kAXW6Qa5QpxOkcoYDyvTLZ8cDh5g1p2omh+2JacmUi3TY2kxsFrVGmwn/sRruxzZELfEx4TcW2V1aFlWgQY3Z2F4P1pEHHdcVQ/kAAAAASUVORK5CYII%3D) no-repeat 0 50%; /* ../images/icon-heart.png */
-    width: 1.142857em; /* 16 / 14 */
-}
-article header .comments span {
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAMCAYAAABvEu28AAAAsElEQVR42q3QsQZCURzH8dZLRFM0tTZdWlubIlqbmpp6g6Y7RQ/QS7RG9AA9QGvE5a5xiYjLr6/8h1v3nDrUn89y/H39nZqkJ6aBDW6QR4qF2H9XDq2hQPGn0BEKNPxbCAk6v4YGtr9zhU6BkRwRMqQvIaaJ4kvgii36GEGu0ArCBbHpecyRV0JMGwkmqNvjGQqQlS+qsGgRELoj8oYs1sIYM4clZKaOUDj78D0O6D4AdKQ8oneWXiwAAAAASUVORK5CYII%3D); /* ../images/icon-comments.png */
-    width: 1.285714em; /* 18 / 14 */
-}
-article header li:hover span {
-    opacity: 0.75;
 }
 /*  This is necessary since Disqus removes any spans inside its link,
     so the span has to be on the outside, under the link. */
@@ -379,7 +368,7 @@ pre .type {
 #post-nav {
 	border-top: 1px solid rgba(0,0,0,0.125);
 	margin: 0 auto;
-	max-width: 54em; /* 864 / 16 */	
+	max-width: 54em; /* 864 / 16 */
 	overflow: hidden;
 	padding: 1.875em 0 0; /* 30 0 0 / 16 */
 }

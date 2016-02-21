@@ -32,9 +32,6 @@
                         <meta name="description" content="{PlaintextDescription}" />
                     {/block:Description}
                 {/block:Link}
-                {block:Chat}
-                    <meta name="description" content="{block:Lines}{block:Label}{Label}: {/block:Label}{Line} &bull; {/block:Lines}" />
-                {/block:Chat}
                 {block:Audio}
                     {block:Caption}
                         <meta name="description" content="{PlaintextCaption}" />
@@ -93,10 +90,6 @@
                         <meta property="og:image" content="{Thumbnail}" />
                     {/block:Thumbnail}
                 {/block:Link}
-                {block:Chat}
-                    <meta property="og:description" content="{block:Lines}{block:Label}{Label}: {/block:Label}{Line} &bull; {/block:Lines}" />
-                    <meta property="og:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
-                {/block:Chat}
                 {block:Audio}
                     {block:Caption}
                         <meta property="og:description" content="{PlaintextCaption}" />
@@ -346,44 +339,6 @@
                                     {block:Description}<p>{Description}</p>{/block:Description}
                                 </article>
                             {/block:Link}
-                            {block:Chat}
-                                <article>
-                                    <header>
-                                        {block:Date}
-                                            <ul>
-                                                <li class="date">
-                                                    <time>
-                                                        <a href="{Permalink}">
-                                                            <svg class="icon icon-16" role="img"><use xlink:href="#icon-date"></use></svg>
-                                                            {Month} {DayOfMonth}{DayOfMonthSuffix}, {Year}
-                                                        </a>
-                                                    </time>
-                                                </li>
-                                                <li class="notes">
-                                                    <a href="{Permalink}#notes">
-                                                        <svg class="icon icon-16" role="img"><use xlink:href="#icon-notes"></use></svg>
-                                                        {NoteCountWithLabel}
-                                                    </a>
-                                                </li>
-                                                <li class="comments">
-                                                    <!-- Disqus part 1 -->
-                                                    <a class="dsq-comment-count" href="{Permalink}#disqus_thread">
-                                                        <svg class="icon icon-16" role="img"><use xlink:href="#icon-comments"></use></svg>
-                                                        Comments
-                                                    </a>
-                                                    <!-- End Disqus part 1 -->
-                                                </li>
-                                            </ul>
-                                        {/block:Date}
-                                        {block:Title}<h1><a href="{Permalink}">{Title}</a></h1>{/block:Title}
-                                    </header>
-                                    <ol>
-                                        {block:Lines}
-                                            <li class="{Alt}">{block:Label}<cite class="user_{UserNumber}">{Label}</cite>{/block:Label}<q>{Line}</q></li>
-                                        {/block:Lines}
-                                    </ol>
-                                </article>
-                            {/block:Chat}
                             {block:Audio}
                                 <article>
                                     <header>

@@ -268,7 +268,7 @@ article header .comments {
     margin-left: 2.428571em; /* 34 / 14 */
 }
 article header .date a {
-    padding-left: 1.642857em; /* 23 / 14 */
+    padding-left: 1.571429em; /* 22 / 14 */
 }
 article header .notes a {
     padding-left: 1.785714em; /* 25 / 14 */
@@ -287,7 +287,7 @@ article header .comments a {
 article header .icon {
     left: 0;
     position: absolute;
-    top: 0;
+    top: 6px;
 }
 /*  This is necessary since Disqus removes any spans inside its link,
     so the span has to be on the outside, under the link. */

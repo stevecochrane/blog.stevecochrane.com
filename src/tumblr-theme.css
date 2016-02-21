@@ -73,11 +73,10 @@ header + p,
 header + h4,
 img + .fig,
 .fig + img,
-.quote blockquote + p {
+blockquote + p,
+p + blockquote {
 	margin-top: 1.875em; /* 30 / 16 */
 }
-p + blockquote,
-blockquote + p,
 p + div,
 div + p,
 h2 + p,

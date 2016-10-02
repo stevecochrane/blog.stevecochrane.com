@@ -62,7 +62,7 @@ body {
     background: #fbf8ef url(images/paper.png);
     color: rgba(0,0,0,0.75);
     font: 87.5%/1.875em "Ideal Sans SSm A", "Ideal Sans SSm B", sans-serif; /* 14 / 16, 30 / 16 */
-    text-rendering: optimizeLegibility;
+    font-kerning: normal;
 }
 
 @media screen and (min-width: 47em) { /* 752 / 16 */

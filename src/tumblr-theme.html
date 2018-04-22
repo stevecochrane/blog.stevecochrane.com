@@ -1,477 +1,477 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>{block:PostSummary}{PlaintextPostSummary} - {/block:PostSummary}{Title}</title>
-        <meta name="author" content="Steve Cochrane" />
-        {block:IndexPage}
-            <meta name="description" content="{MetaDescription}" />
-        {/block:IndexPage}
-        {block:PermalinkPage}
-            {block:Posts}
-                {block:Text}
-                    <meta name="description" content="{PlaintextBody}" />
-                {/block:Text}
-                {block:Photo}
-                    {block:Caption}
-                        <meta name="description" content="{PlaintextCaption}" />
-                    {/block:Caption}
-                {/block:Photo}
-                {block:Photoset}
-                    {block:Caption}
-                        <meta name="description" content="{PlaintextCaption}" />
-                    {/block:Caption}
-                {/block:Photoset}
-                {block:Quote}
-                    {block:Source}
-                        <meta name="description" content="{PlaintextSource}" />
-                    {/block:Source}
-                {/block:Quote}
-                {block:Link}
-                    {block:Description}
-                        <meta name="description" content="{PlaintextDescription}" />
-                    {/block:Description}
-                {/block:Link}
-                {block:Audio}
-                    {block:Caption}
-                        <meta name="description" content="{PlaintextCaption}" />
-                    {/block:Caption}
-                {/block:Audio}
-                {block:Video}
-                    {block:Caption}
-                        <meta name="description" content="{PlaintextCaption}" />
-                    {/block:Caption}
-                {/block:Video}
-            {/block:Posts}
-        {/block:PermalinkPage}
-        {block:IndexPage}
-            <meta property="og:url" content="{BlogURL}" />
-            <meta property="og:title" content="{Title}" />
-            <meta property="og:description" content="{MetaDescription}" />
-            <meta property="og:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
-        {/block:IndexPage}
-        {block:PermalinkPage}
-            <meta property="og:url" content="{Permalink}" />
-            <meta property="og:title" content="{block:PostSummary}{PlaintextPostSummary}{/block:PostSummary}" />
-            {block:Posts}
-                {block:Text}
-                    <meta property="og:description" content="{PlaintextBody}" />
-                    <meta property="og:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
-                {/block:Text}
-                {block:Photo}
-                    {block:Caption}
-                        <meta property="og:description" content="{PlaintextCaption}" />
-                    {/block:Caption}
-                    {block:HighRes}
-                        <meta property="og:image" content="{PhotoURL-HighRes}" />
-                    {/block:HighRes}
-                {/block:Photo}
-                {block:Photoset}
-                    {block:Caption}
-                        <meta property="og:description" content="{PlaintextCaption}" />
-                    {/block:Caption}
-                    {block:Photos}
-                        {block:HighRes}
-                            <meta property="og:image" content="{PhotoURL-HighRes}" />
-                        {/block:HighRes}
-                    {/block:Photos}
-                {/block:Photoset}
-                {block:Quote}
-                    {block:Source}
-                        <meta property="og:description" content="{PlaintextSource}" />
-                    {/block:Source}
-                    <meta property="og:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
-                {/block:Quote}
-                {block:Link}
-                    {block:Description}
-                        <meta property="og:description" content="{PlaintextDescription}" />
-                    {/block:Description}
-                    {block:Thumbnail}
-                        <meta property="og:image" content="{Thumbnail}" />
-                    {/block:Thumbnail}
-                {/block:Link}
-                {block:Audio}
-                    {block:Caption}
-                        <meta property="og:description" content="{PlaintextCaption}" />
-                    {/block:Caption}
-                    {block:AlbumArt}
-                        <meta property="og:image" content="{AlbumArtURL}" />
-                    {/block:AlbumArt}
-                {/block:Audio}
-                {block:Video}
-                    {block:Caption}
-                        <meta property="og:description" content="{PlaintextCaption}" />
-                    {/block:Caption}
-                    {block:VideoThumbnail}
-                        <meta property="og:image" content="{VideoThumbnailURL}" />
-                    {/block:VideoThumbnail}
-                {/block:Video}
-            {/block:Posts}
-        {/block:PermalinkPage}
-        <meta property="og:site_name" content="{Title}" />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@stevecochrane" />
-        <meta name="text:Disqus Shortname" content="" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
-        <link rel="stylesheet" href="//cloud.typography.com/6084432/761228/css/fonts.css" />
-        <link rel="stylesheet" href="http://stevecochrane.com/tumblr/tumblr-theme.css" />
-        <link rel="shortcut icon" type="image/ico" href="http://stevecochrane.com/favicon.ico" />
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/stevecochrane" />
-    </head>
-    <body>
-        <svg display="none" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <defs>
-                <symbol id="icon-comments" viewBox="0 0 32 32">
-                    <title>Comments</title>
-                    <path d="M13.005,16.001 L15.001,16.001 C18.315,16.001 21.001,13.313 21.001,10.001 L21.001,8 C21.001,4.687 18.315,2 15.001,2 L8.001,2 C4.689,2 2.001,4.687 2.001,8 L2.001,10 C2.001,13.313 4.689,16 8.001,16 L8.001,21 L13.005,16.001 L13.005,16.001 Z M24.001,11 L22.933,11 C22.439,14.939 19.074,18 15.001,18 L13.833,18 L11.226,20.604 C11.929,23.138 14.245,25 17.001,25 L18.999,25 L24.001,30 L24.001,25 C27.315,25 30.001,22.312 30.001,19 L30.001,17 C30.001,13.688 27.315,11 24.001,11 L24.001,11 Z"></path>
-                </symbol>
-                <symbol id="icon-date" viewBox="0 0 32 32">
-                    <title>Date</title>
-                    <path d="M17.001,13.711 L17.001,7 C17.001,6.448 16.554,6 16.001,6 C15.448,6 15.001,6.448 15.001,7 L15.001,13.71 C14.425,13.962 13.963,14.424 13.711,15 L8.001,15 C7.449,15 7.001,15.447 7.001,16 C7.001,16.554 7.449,17 8.001,17 L13.711,17 C14.098,17.883 14.975,18.5 16,18.5 C17.382,18.5 18.5,17.38 18.5,16 C18.5,14.977 17.883,14.099 17.001,13.711"></path>
-                    <path d="M16.001,2 C8.269,2 2.001,8.268 2.001,16 C2.001,23.73 8.269,30 16.001,30 C23.733,30 30.001,23.73 30.001,16 C30.001,8.269 23.733,2 16.001,2 M16.001,27.001 C9.936,27.001 5.001,22.065 5.001,16.001 C5.001,9.936 9.936,5.001 16.001,5.001 C22.066,5.001 27.001,9.936 27.001,16.001 C27.001,22.065 22.066,27.001 16.001,27.001"></path>
-                </symbol>
-                <symbol id="icon-notes" viewBox="0 0 32 32">
-                    <title>Notes</title>
-                    <path d="M22.655,2 C19.712,2 17.176,3.881 16.003,6.578 C14.829,3.881 12.294,2 9.354,2 C5.294,2 2.001,7.117 2.001,11.496 C2.001,20.406 16.002,30 16.002,30 C16.002,30 30,20.122 30,11.496 C30.001,7.118 26.708,2 22.655,2"></path>
-                </symbol>
-            </defs>
-        </svg>
-        <div id="container">
-            <header>
-                <div>
-                    <h1><a href="/"><img src="http://stevecochrane.com/tumblr/images/header-banner.png" alt="{Title}" /></a></h1>
-                    <nav>
-                        <ul>
-                            <li id="nav-subscribe"><a href="http://feeds.feedburner.com/stevecochrane">Subscribe</a></li>
-                            <li id="nav-archive"><a href="/archive/">Archive</a></li>
-                            <li id="nav-twitter"><a href="http://twitter.com/stevecochrane">Twitter</a></li>
-                            <li id="nav-email"><a href="mailto:steve@stevecochrane.com">Email</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <span><span></span></span>
-            </header>
-            <div id="main" role="main">
-                <div id="intro" class="golden-section">
-                    <div class="golden-section-left"></div>
-                    <div class="golden-section-content">
-                        <p>Hi! I&apos;m <a href="http://stevecochrane.com">Steve Cochrane</a>, and this blog was a &ldquo;devlog&rdquo; of my experiences working on my videogame The Mountaineers, an NES-style platformer. Now I don&apos;t know what this is. Enjoy!</p>
-                        <p>Disclaimer: I am an employee of Blizzard Entertainment (specifically, a web engineer) and this is my personal blog. All thoughts and opinions are my own.</p>
-                    </div>
-                    <div class="golden-section-right"></div>
-                </div>
-                {block:Posts}
-                    <div class="golden-section">
-                        <div class="golden-section-left"></div>
-                        <div class="golden-section-content">
-                            {block:Text}
-                                <article>
-                                    <header>
-                                        {block:Date}
-                                            <ul>
-                                                <li class="date">
-                                                    <time>
-                                                        <a href="{Permalink}">
-                                                            <svg class="icon icon-16" role="img"><use xlink:href="#icon-date"></use></svg>
-                                                            {Month} {DayOfMonth}{DayOfMonthSuffix}, {Year}
-                                                        </a>
-                                                    </time>
-                                                </li>
-                                                <li class="notes">
-                                                    <a href="{Permalink}#notes">
-                                                        <svg class="icon icon-16" role="img"><use xlink:href="#icon-notes"></use></svg>
-                                                        {NoteCountWithLabel}
-                                                    </a>
-                                                </li>
-                                                <li class="comments">
-                                                    <a href="{Permalink}#comments">
-                                                        <svg class="icon icon-16" role="img"><use xlink:href="#icon-comments"></use></svg>
-                                                        <span class="disqus-comment-count" data-disqus-url="{Permalink}"></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        {/block:Date}
-                                        {block:Title}<h1><a href="{Permalink}">{Title}</a></h1>{/block:Title}
-                                    </header>
-                                    {Body}
-                                </article>
-                            {/block:Text}
-                            {block:Photo}
-                                <article>
-                                    <header>
-                                        {block:Date}
-                                            <ul>
-                                                <li class="date">
-                                                    <time>
-                                                        <a href="{Permalink}">
-                                                            <svg class="icon icon-16" role="img"><use xlink:href="#icon-date"></use></svg>
-                                                            {Month} {DayOfMonth}{DayOfMonthSuffix}, {Year}
-                                                        </a>
-                                                    </time>
-                                                </li>
-                                                <li class="notes">
-                                                    <a href="{Permalink}#notes">
-                                                        <svg class="icon icon-16" role="img"><use xlink:href="#icon-notes"></use></svg>
-                                                        {NoteCountWithLabel}
-                                                    </a>
-                                                </li>
-                                                <li class="comments">
-                                                    <a href="{Permalink}#comments">
-                                                        <svg class="icon icon-16" role="img"><use xlink:href="#icon-comments"></use></svg>
-                                                        <span class="disqus-comment-count" data-disqus-url="{Permalink}"></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        {/block:Date}
-                                    </header>
-                                    {block:LinkURL}{LinkOpenTag}{/block:LinkURL}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" width="{PhotoWidth-HighRes}" height="{PhotoHeight-HighRes}" />{block:LinkURL}{LinkCloseTag}{/block:LinkURL}
-                                    {block:Caption}{Caption}{/block:Caption}
-                                </article>
-                            {/block:Photo}
-                            {block:Photoset}
-                                <article>
-                                    <header>
-                                        {block:Date}
-                                            <ul>
-                                                <li class="date">
-                                                    <time>
-                                                        <a href="{Permalink}">
-                                                            <svg class="icon icon-16" role="img"><use xlink:href="#icon-date"></use></svg>
-                                                            {Month} {DayOfMonth}{DayOfMonthSuffix}, {Year}
-                                                        </a>
-                                                    </time>
-                                                </li>
-                                                <li class="notes">
-                                                    <a href="{Permalink}#notes">
-                                                        <svg class="icon icon-16" role="img"><use xlink:href="#icon-notes"></use></svg>
-                                                        {NoteCountWithLabel}
-                                                    </a>
-                                                </li>
-                                                <li class="comments">
-                                                    <a href="{Permalink}#comments">
-                                                        <svg class="icon icon-16" role="img"><use xlink:href="#icon-comments"></use></svg>
-                                                        <span class="disqus-comment-count" data-disqus-url="{Permalink}"></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        {/block:Date}
-                                    </header>
-                                    {block:Photos}
-                                        {block:Caption}<div class="fig">{/block:Caption}
-                                        {block:LinkURL}{LinkOpenTag}{/block:LinkURL}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" width="{PhotoWidth-HighRes}" height="{PhotoHeight-HighRes}" />{block:LinkURL}{LinkCloseTag}{/block:LinkURL}
-                                        {block:Caption}<p>{Caption}</p></div>{/block:Caption}
-                                    {/block:Photos}
-                                    {block:Caption}{Caption}{/block:Caption}
-                                </article>
-                            {/block:Photoset}
-                            {block:Quote}
-                                <article>
-                                    <header>
-                                        {block:Date}
-                                            <ul>
-                                                <li class="date">
-                                                    <time>
-                                                        <a href="{Permalink}">
-                                                            <svg class="icon icon-16" role="img"><use xlink:href="#icon-date"></use></svg>
-                                                            {Month} {DayOfMonth}{DayOfMonthSuffix}, {Year}
-                                                        </a>
-                                                    </time>
-                                                </li>
-                                                <li class="notes">
-                                                    <a href="{Permalink}#notes">
-                                                        <svg class="icon icon-16" role="img"><use xlink:href="#icon-notes"></use></svg>
-                                                        {NoteCountWithLabel}
-                                                    </a>
-                                                </li>
-                                                <li class="comments">
-                                                    <a href="{Permalink}#comments">
-                                                        <svg class="icon icon-16" role="img"><use xlink:href="#icon-comments"></use></svg>
-                                                        <span class="disqus-comment-count" data-disqus-url="{Permalink}"></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        {/block:Date}
-                                    </header>
-                                    <blockquote class="{Length}">
-                                        <p>{Quote}</p>
-                                    </blockquote>
-                                    {block:Source}<p><cite>&mdash;&nbsp;{Source}</cite></p>{/block:Source}
-                                </article>
-                            {/block:Quote}
-                            {block:Link}
-                                <article>
-                                    <header>
-                                        {block:Date}
-                                            <ul>
-                                                <li class="date">
-                                                    <time>
-                                                        <a href="{Permalink}">
-                                                            <svg class="icon icon-16" role="img"><use xlink:href="#icon-date"></use></svg>
-                                                            {Month} {DayOfMonth}{DayOfMonthSuffix}, {Year}
-                                                        </a>
-                                                    </time>
-                                                </li>
-                                                <li class="notes">
-                                                    <a href="{Permalink}#notes">
-                                                        <svg class="icon icon-16" role="img"><use xlink:href="#icon-notes"></use></svg>
-                                                        {NoteCountWithLabel}
-                                                    </a>
-                                                </li>
-                                                <li class="comments">
-                                                    <a href="{Permalink}#comments">
-                                                        <svg class="icon icon-16" role="img"><use xlink:href="#icon-comments"></use></svg>
-                                                        <span class="disqus-comment-count" data-disqus-url="{Permalink}"></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        {/block:Date}
-                                        <h1><a href="{URL}">{Name}</a></h1>
-                                    </header>
-                                    {block:Description}<p>{Description}</p>{/block:Description}
-                                </article>
-                            {/block:Link}
-                            {block:Audio}
-                                <article>
-                                    <header>
-                                        {block:Date}
-                                            <ul>
-                                                <li class="date">
-                                                    <time>
-                                                        <a href="{Permalink}">
-                                                            <svg class="icon icon-16" role="img"><use xlink:href="#icon-date"></use></svg>
-                                                            {Month} {DayOfMonth}{DayOfMonthSuffix}, {Year}
-                                                        </a>
-                                                    </time>
-                                                </li>
-                                                <li class="notes">
-                                                    <a href="{Permalink}#notes">
-                                                        <svg class="icon icon-16" role="img"><use xlink:href="#icon-notes"></use></svg>
-                                                        {NoteCountWithLabel}
-                                                    </a>
-                                                </li>
-                                                <li class="comments">
-                                                    <a href="{Permalink}#comments">
-                                                        <svg class="icon icon-16" role="img"><use xlink:href="#icon-comments"></use></svg>
-                                                        <span class="disqus-comment-count" data-disqus-url="{Permalink}"></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        {/block:Date}
-                                    </header>
-                                    <div class="fig">
-                                        {AudioPlayerBlack}
-                                    </div>
-                                    {block:Caption}{Caption}{/block:Caption}
-                                </article>
-                            {/block:Audio}
-                            {block:Video}
-                                <article>
-                                    <header>
-                                        {block:Date}
-                                            <ul>
-                                                <li class="date">
-                                                    <time>
-                                                        <a href="{Permalink}">
-                                                            <svg class="icon icon-16" role="img"><use xlink:href="#icon-date"></use></svg>
-                                                            {Month} {DayOfMonth}{DayOfMonthSuffix}, {Year}
-                                                        </a>
-                                                    </time>
-                                                </li>
-                                                <li class="notes">
-                                                    <a href="{Permalink}#notes">
-                                                        <svg class="icon icon-16" role="img"><use xlink:href="#icon-notes"></use></svg>
-                                                        {NoteCountWithLabel}
-                                                    </a>
-                                                </li>
-                                                <li class="comments">
-                                                    <a href="{Permalink}#comments">
-                                                        <svg class="icon icon-16" role="img"><use xlink:href="#icon-comments"></use></svg>
-                                                        <span class="disqus-comment-count" data-disqus-url="{Permalink}"></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        {/block:Date}
-                                    </header>
-                                    <div class="fig">
-                                        {Video-400}
-                                    </div>
-                                    {block:Caption}{Caption}{/block:Caption}
-                                </article>
-                            {/block:Video}
-                            {block:IfShowNotes}{PostNotes}{/block:IfShowNotes}
-                        </div>
-                        <div class="golden-section-right"></div>
-                    </div>
-                {/block:Posts}
-                {block:IfDisqusShortname}
-                    <div class="golden-section">
-                        <div class="golden-section-left"></div>
-                        <div class="golden-section-content">
-                            <div id="comments">
-                                <div id="disqus_thread"></div>
-                            </div>
-                        </div>
-                        <div class="golden-section-right"></div>
-                    </div>
-                    <script>
-                        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-                        var disqus_shortname = "{text:Disqus Shortname}"; // Required - Enter shortname in Tumblr Theme Options
-                        var disqus_url = "{Permalink}";
+	<head>
+		<meta charset="utf-8" />
+		<title>{block:PostSummary}{PlaintextPostSummary} - {/block:PostSummary}{Title}</title>
+		<meta name="author" content="Steve Cochrane" />
+		{block:IndexPage}
+			<meta name="description" content="{MetaDescription}" />
+		{/block:IndexPage}
+		{block:PermalinkPage}
+			{block:Posts}
+				{block:Text}
+					<meta name="description" content="{PlaintextBody}" />
+				{/block:Text}
+				{block:Photo}
+					{block:Caption}
+						<meta name="description" content="{PlaintextCaption}" />
+					{/block:Caption}
+				{/block:Photo}
+				{block:Photoset}
+					{block:Caption}
+						<meta name="description" content="{PlaintextCaption}" />
+					{/block:Caption}
+				{/block:Photoset}
+				{block:Quote}
+					{block:Source}
+						<meta name="description" content="{PlaintextSource}" />
+					{/block:Source}
+				{/block:Quote}
+				{block:Link}
+					{block:Description}
+						<meta name="description" content="{PlaintextDescription}" />
+					{/block:Description}
+				{/block:Link}
+				{block:Audio}
+					{block:Caption}
+						<meta name="description" content="{PlaintextCaption}" />
+					{/block:Caption}
+				{/block:Audio}
+				{block:Video}
+					{block:Caption}
+						<meta name="description" content="{PlaintextCaption}" />
+					{/block:Caption}
+				{/block:Video}
+			{/block:Posts}
+		{/block:PermalinkPage}
+		{block:IndexPage}
+			<meta property="og:url" content="{BlogURL}" />
+			<meta property="og:title" content="{Title}" />
+			<meta property="og:description" content="{MetaDescription}" />
+			<meta property="og:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
+		{/block:IndexPage}
+		{block:PermalinkPage}
+			<meta property="og:url" content="{Permalink}" />
+			<meta property="og:title" content="{block:PostSummary}{PlaintextPostSummary}{/block:PostSummary}" />
+			{block:Posts}
+				{block:Text}
+					<meta property="og:description" content="{PlaintextBody}" />
+					<meta property="og:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
+				{/block:Text}
+				{block:Photo}
+					{block:Caption}
+						<meta property="og:description" content="{PlaintextCaption}" />
+					{/block:Caption}
+					{block:HighRes}
+						<meta property="og:image" content="{PhotoURL-HighRes}" />
+					{/block:HighRes}
+				{/block:Photo}
+				{block:Photoset}
+					{block:Caption}
+						<meta property="og:description" content="{PlaintextCaption}" />
+					{/block:Caption}
+					{block:Photos}
+						{block:HighRes}
+							<meta property="og:image" content="{PhotoURL-HighRes}" />
+						{/block:HighRes}
+					{/block:Photos}
+				{/block:Photoset}
+				{block:Quote}
+					{block:Source}
+						<meta property="og:description" content="{PlaintextSource}" />
+					{/block:Source}
+					<meta property="og:image" content="http://stevecochrane.com/tumblr/images/portrait-512.png" />
+				{/block:Quote}
+				{block:Link}
+					{block:Description}
+						<meta property="og:description" content="{PlaintextDescription}" />
+					{/block:Description}
+					{block:Thumbnail}
+						<meta property="og:image" content="{Thumbnail}" />
+					{/block:Thumbnail}
+				{/block:Link}
+				{block:Audio}
+					{block:Caption}
+						<meta property="og:description" content="{PlaintextCaption}" />
+					{/block:Caption}
+					{block:AlbumArt}
+						<meta property="og:image" content="{AlbumArtURL}" />
+					{/block:AlbumArt}
+				{/block:Audio}
+				{block:Video}
+					{block:Caption}
+						<meta property="og:description" content="{PlaintextCaption}" />
+					{/block:Caption}
+					{block:VideoThumbnail}
+						<meta property="og:image" content="{VideoThumbnailURL}" />
+					{/block:VideoThumbnail}
+				{/block:Video}
+			{/block:Posts}
+		{/block:PermalinkPage}
+		<meta property="og:site_name" content="{Title}" />
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@stevecochrane" />
+		<meta name="text:Disqus Shortname" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<link rel="stylesheet" href="//cloud.typography.com/6084432/761228/css/fonts.css" />
+		<link rel="stylesheet" href="http://stevecochrane.com/tumblr/tumblr-theme.css" />
+		<link rel="shortcut icon" type="image/ico" href="http://stevecochrane.com/favicon.ico" />
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/stevecochrane" />
+	</head>
+	<body>
+		<svg display="none" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<defs>
+				<symbol id="icon-comments" viewBox="0 0 32 32">
+					<title>Comments</title>
+					<path d="M13.005,16.001 L15.001,16.001 C18.315,16.001 21.001,13.313 21.001,10.001 L21.001,8 C21.001,4.687 18.315,2 15.001,2 L8.001,2 C4.689,2 2.001,4.687 2.001,8 L2.001,10 C2.001,13.313 4.689,16 8.001,16 L8.001,21 L13.005,16.001 L13.005,16.001 Z M24.001,11 L22.933,11 C22.439,14.939 19.074,18 15.001,18 L13.833,18 L11.226,20.604 C11.929,23.138 14.245,25 17.001,25 L18.999,25 L24.001,30 L24.001,25 C27.315,25 30.001,22.312 30.001,19 L30.001,17 C30.001,13.688 27.315,11 24.001,11 L24.001,11 Z"></path>
+				</symbol>
+				<symbol id="icon-date" viewBox="0 0 32 32">
+					<title>Date</title>
+					<path d="M17.001,13.711 L17.001,7 C17.001,6.448 16.554,6 16.001,6 C15.448,6 15.001,6.448 15.001,7 L15.001,13.71 C14.425,13.962 13.963,14.424 13.711,15 L8.001,15 C7.449,15 7.001,15.447 7.001,16 C7.001,16.554 7.449,17 8.001,17 L13.711,17 C14.098,17.883 14.975,18.5 16,18.5 C17.382,18.5 18.5,17.38 18.5,16 C18.5,14.977 17.883,14.099 17.001,13.711"></path>
+					<path d="M16.001,2 C8.269,2 2.001,8.268 2.001,16 C2.001,23.73 8.269,30 16.001,30 C23.733,30 30.001,23.73 30.001,16 C30.001,8.269 23.733,2 16.001,2 M16.001,27.001 C9.936,27.001 5.001,22.065 5.001,16.001 C5.001,9.936 9.936,5.001 16.001,5.001 C22.066,5.001 27.001,9.936 27.001,16.001 C27.001,22.065 22.066,27.001 16.001,27.001"></path>
+				</symbol>
+				<symbol id="icon-notes" viewBox="0 0 32 32">
+					<title>Notes</title>
+					<path d="M22.655,2 C19.712,2 17.176,3.881 16.003,6.578 C14.829,3.881 12.294,2 9.354,2 C5.294,2 2.001,7.117 2.001,11.496 C2.001,20.406 16.002,30 16.002,30 C16.002,30 30,20.122 30,11.496 C30.001,7.118 26.708,2 22.655,2"></path>
+				</symbol>
+			</defs>
+		</svg>
+		<div id="container">
+			<header>
+				<div>
+					<h1><a href="/"><img src="http://stevecochrane.com/tumblr/images/header-banner.png" alt="{Title}" /></a></h1>
+					<nav>
+						<ul>
+							<li id="nav-subscribe"><a href="http://feeds.feedburner.com/stevecochrane">Subscribe</a></li>
+							<li id="nav-archive"><a href="/archive/">Archive</a></li>
+							<li id="nav-twitter"><a href="http://twitter.com/stevecochrane">Twitter</a></li>
+							<li id="nav-email"><a href="mailto:steve@stevecochrane.com">Email</a></li>
+						</ul>
+					</nav>
+				</div>
+				<span><span></span></span>
+			</header>
+			<div id="main" role="main">
+				<div id="intro" class="golden-section">
+					<div class="golden-section-left"></div>
+					<div class="golden-section-content">
+						<p>Hi! I&apos;m <a href="http://stevecochrane.com">Steve Cochrane</a>, and this blog was a &ldquo;devlog&rdquo; of my experiences working on my videogame The Mountaineers, an NES-style platformer. Now I don&apos;t know what this is. Enjoy!</p>
+						<p>Disclaimer: I am an employee of Blizzard Entertainment (specifically, a web engineer) and this is my personal blog. All thoughts and opinions are my own.</p>
+					</div>
+					<div class="golden-section-right"></div>
+				</div>
+				{block:Posts}
+					<div class="golden-section">
+						<div class="golden-section-left"></div>
+						<div class="golden-section-content">
+							{block:Text}
+								<article>
+									<header>
+										{block:Date}
+											<ul>
+												<li class="date">
+													<time>
+														<a href="{Permalink}">
+															<svg class="icon icon-16" role="img"><use xlink:href="#icon-date"></use></svg>
+															{Month} {DayOfMonth}{DayOfMonthSuffix}, {Year}
+														</a>
+													</time>
+												</li>
+												<li class="notes">
+													<a href="{Permalink}#notes">
+														<svg class="icon icon-16" role="img"><use xlink:href="#icon-notes"></use></svg>
+														{NoteCountWithLabel}
+													</a>
+												</li>
+												<li class="comments">
+													<a href="{Permalink}#comments">
+														<svg class="icon icon-16" role="img"><use xlink:href="#icon-comments"></use></svg>
+														<span class="disqus-comment-count" data-disqus-url="{Permalink}"></span>
+													</a>
+												</li>
+											</ul>
+										{/block:Date}
+										{block:Title}<h1><a href="{Permalink}">{Title}</a></h1>{/block:Title}
+									</header>
+									{Body}
+								</article>
+							{/block:Text}
+							{block:Photo}
+								<article>
+									<header>
+										{block:Date}
+											<ul>
+												<li class="date">
+													<time>
+														<a href="{Permalink}">
+															<svg class="icon icon-16" role="img"><use xlink:href="#icon-date"></use></svg>
+															{Month} {DayOfMonth}{DayOfMonthSuffix}, {Year}
+														</a>
+													</time>
+												</li>
+												<li class="notes">
+													<a href="{Permalink}#notes">
+														<svg class="icon icon-16" role="img"><use xlink:href="#icon-notes"></use></svg>
+														{NoteCountWithLabel}
+													</a>
+												</li>
+												<li class="comments">
+													<a href="{Permalink}#comments">
+														<svg class="icon icon-16" role="img"><use xlink:href="#icon-comments"></use></svg>
+														<span class="disqus-comment-count" data-disqus-url="{Permalink}"></span>
+													</a>
+												</li>
+											</ul>
+										{/block:Date}
+									</header>
+									{block:LinkURL}{LinkOpenTag}{/block:LinkURL}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" width="{PhotoWidth-HighRes}" height="{PhotoHeight-HighRes}" />{block:LinkURL}{LinkCloseTag}{/block:LinkURL}
+									{block:Caption}{Caption}{/block:Caption}
+								</article>
+							{/block:Photo}
+							{block:Photoset}
+								<article>
+									<header>
+										{block:Date}
+											<ul>
+												<li class="date">
+													<time>
+														<a href="{Permalink}">
+															<svg class="icon icon-16" role="img"><use xlink:href="#icon-date"></use></svg>
+															{Month} {DayOfMonth}{DayOfMonthSuffix}, {Year}
+														</a>
+													</time>
+												</li>
+												<li class="notes">
+													<a href="{Permalink}#notes">
+														<svg class="icon icon-16" role="img"><use xlink:href="#icon-notes"></use></svg>
+														{NoteCountWithLabel}
+													</a>
+												</li>
+												<li class="comments">
+													<a href="{Permalink}#comments">
+														<svg class="icon icon-16" role="img"><use xlink:href="#icon-comments"></use></svg>
+														<span class="disqus-comment-count" data-disqus-url="{Permalink}"></span>
+													</a>
+												</li>
+											</ul>
+										{/block:Date}
+									</header>
+									{block:Photos}
+										{block:Caption}<div class="fig">{/block:Caption}
+										{block:LinkURL}{LinkOpenTag}{/block:LinkURL}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" width="{PhotoWidth-HighRes}" height="{PhotoHeight-HighRes}" />{block:LinkURL}{LinkCloseTag}{/block:LinkURL}
+										{block:Caption}<p>{Caption}</p></div>{/block:Caption}
+									{/block:Photos}
+									{block:Caption}{Caption}{/block:Caption}
+								</article>
+							{/block:Photoset}
+							{block:Quote}
+								<article>
+									<header>
+										{block:Date}
+											<ul>
+												<li class="date">
+													<time>
+														<a href="{Permalink}">
+															<svg class="icon icon-16" role="img"><use xlink:href="#icon-date"></use></svg>
+															{Month} {DayOfMonth}{DayOfMonthSuffix}, {Year}
+														</a>
+													</time>
+												</li>
+												<li class="notes">
+													<a href="{Permalink}#notes">
+														<svg class="icon icon-16" role="img"><use xlink:href="#icon-notes"></use></svg>
+														{NoteCountWithLabel}
+													</a>
+												</li>
+												<li class="comments">
+													<a href="{Permalink}#comments">
+														<svg class="icon icon-16" role="img"><use xlink:href="#icon-comments"></use></svg>
+														<span class="disqus-comment-count" data-disqus-url="{Permalink}"></span>
+													</a>
+												</li>
+											</ul>
+										{/block:Date}
+									</header>
+									<blockquote class="{Length}">
+										<p>{Quote}</p>
+									</blockquote>
+									{block:Source}<p><cite>&mdash;&nbsp;{Source}</cite></p>{/block:Source}
+								</article>
+							{/block:Quote}
+							{block:Link}
+								<article>
+									<header>
+										{block:Date}
+											<ul>
+												<li class="date">
+													<time>
+														<a href="{Permalink}">
+															<svg class="icon icon-16" role="img"><use xlink:href="#icon-date"></use></svg>
+															{Month} {DayOfMonth}{DayOfMonthSuffix}, {Year}
+														</a>
+													</time>
+												</li>
+												<li class="notes">
+													<a href="{Permalink}#notes">
+														<svg class="icon icon-16" role="img"><use xlink:href="#icon-notes"></use></svg>
+														{NoteCountWithLabel}
+													</a>
+												</li>
+												<li class="comments">
+													<a href="{Permalink}#comments">
+														<svg class="icon icon-16" role="img"><use xlink:href="#icon-comments"></use></svg>
+														<span class="disqus-comment-count" data-disqus-url="{Permalink}"></span>
+													</a>
+												</li>
+											</ul>
+										{/block:Date}
+										<h1><a href="{URL}">{Name}</a></h1>
+									</header>
+									{block:Description}<p>{Description}</p>{/block:Description}
+								</article>
+							{/block:Link}
+							{block:Audio}
+								<article>
+									<header>
+										{block:Date}
+											<ul>
+												<li class="date">
+													<time>
+														<a href="{Permalink}">
+															<svg class="icon icon-16" role="img"><use xlink:href="#icon-date"></use></svg>
+															{Month} {DayOfMonth}{DayOfMonthSuffix}, {Year}
+														</a>
+													</time>
+												</li>
+												<li class="notes">
+													<a href="{Permalink}#notes">
+														<svg class="icon icon-16" role="img"><use xlink:href="#icon-notes"></use></svg>
+														{NoteCountWithLabel}
+													</a>
+												</li>
+												<li class="comments">
+													<a href="{Permalink}#comments">
+														<svg class="icon icon-16" role="img"><use xlink:href="#icon-comments"></use></svg>
+														<span class="disqus-comment-count" data-disqus-url="{Permalink}"></span>
+													</a>
+												</li>
+											</ul>
+										{/block:Date}
+									</header>
+									<div class="fig">
+										{AudioPlayerBlack}
+									</div>
+									{block:Caption}{Caption}{/block:Caption}
+								</article>
+							{/block:Audio}
+							{block:Video}
+								<article>
+									<header>
+										{block:Date}
+											<ul>
+												<li class="date">
+													<time>
+														<a href="{Permalink}">
+															<svg class="icon icon-16" role="img"><use xlink:href="#icon-date"></use></svg>
+															{Month} {DayOfMonth}{DayOfMonthSuffix}, {Year}
+														</a>
+													</time>
+												</li>
+												<li class="notes">
+													<a href="{Permalink}#notes">
+														<svg class="icon icon-16" role="img"><use xlink:href="#icon-notes"></use></svg>
+														{NoteCountWithLabel}
+													</a>
+												</li>
+												<li class="comments">
+													<a href="{Permalink}#comments">
+														<svg class="icon icon-16" role="img"><use xlink:href="#icon-comments"></use></svg>
+														<span class="disqus-comment-count" data-disqus-url="{Permalink}"></span>
+													</a>
+												</li>
+											</ul>
+										{/block:Date}
+									</header>
+									<div class="fig">
+										{Video-400}
+									</div>
+									{block:Caption}{Caption}{/block:Caption}
+								</article>
+							{/block:Video}
+							{block:IfShowNotes}{PostNotes}{/block:IfShowNotes}
+						</div>
+						<div class="golden-section-right"></div>
+					</div>
+				{/block:Posts}
+				{block:IfDisqusShortname}
+					<div class="golden-section">
+						<div class="golden-section-left"></div>
+						<div class="golden-section-content">
+							<div id="comments">
+								<div id="disqus_thread"></div>
+							</div>
+						</div>
+						<div class="golden-section-right"></div>
+					</div>
+					<script>
+						/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+						var disqus_shortname = "{text:Disqus Shortname}"; // Required - Enter shortname in Tumblr Theme Options
+						var disqus_url = "{Permalink}";
 
-                        /* * * DON'T EDIT BELOW THIS LINE * * */
-                        (function() {
-                            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                        })();
-                    </script>
-                {/block:IfDisqusShortname}
-                {block:PostNotes}
-                    <div class="golden-section">
-                        <div class="golden-section-left"></div>
-                        <div class="golden-section-content">
-                            <div id="notes">
-                                {PostNotes-64}
-                            </div>
-                        </div>
-                        <div class="golden-section-right"></div>
-                    </div>
-                {/block:PostNotes}
-                {block:Pagination}
-                    <div id="post-nav">
-                        {block:NextPage}<p id="previous"><a href="{NextPage}"><img src="http://stevecochrane.com/tumblr/images/page-nav-previous.png" alt="Older entries"></a></p>{/block:NextPage}
-                        {block:PreviousPage}<p id="next"><a href="{PreviousPage}"><img src="http://stevecochrane.com/tumblr/images/page-nav-next.png" alt="Newer entries"></a></p>{/block:PreviousPage}
-                    </div>
-                {/block:Pagination}
-                {block:PermalinkPagination}
-                    <div id="post-nav">
-                        {block:NextPost}<p id="next"><a href="{NextPost}"><img src="http://stevecochrane.com/tumblr/images/page-nav-next.png" alt="Next entry"></a></p>{/block:NextPost}
-                        {block:PreviousPost}<p id="previous"><a href="{PreviousPost}"><img src="http://stevecochrane.com/tumblr/images/page-nav-previous.png" alt="Previous entry"></a></p>{/block:PreviousPost}
-                    </div>
-                {/block:PermalinkPagination}
-            </div>
-            <footer>
-                <div>
-                    <div class="golden-section">
-                        <div class="golden-section-left"></div>
-                        <div class="golden-section-content">
-                            <p>Made with <a href="https://atom.io/">Atom</a>. <a href="http://www.typography.com/fonts/sentinel/overview/">Sentinel</a> and <a href="http://www.typography.com/fonts/ideal-sans/overview/">Ideal Sans</a> fonts provided by <a href="http://www.typography.com/cloud/welcome/">Hoefler & Co.</a> Powered by <a href="http://tumblr.com/">Tumblr</a>.<br />Backgrounds <a href="http://stevecochrane.com/tumblr/images/paper.png">1</a> and <a href="http://stevecochrane.com/tumblr/images/red-fabric.png">2</a> modified from originals on <a href="http://subtlepatterns.com">Subtle Patterns</a> under <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons</a> license.<br/>Copyright &copy; {CopyrightYears} <a href="http://stevecochrane.com">Steve Cochrane</a> unless otherwise noted. All rights reserved.</p>
-                        </div>
-                        <div class="golden-section-right"></div>
-                    </div>
-                </div>
-            </footer>
-        </div>
-        <script id="dsq-count-scr" src="//stevecochrane.disqus.com/count.js" async></script>
-        <!-- Google Analytics -->
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-            ga('create', 'UA-23677473-1', 'auto');
-            ga('send', 'pageview');
-        </script>
-        <!-- End Google Analytics -->
-    </body>
+						/* * * DON'T EDIT BELOW THIS LINE * * */
+						(function() {
+							var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+							dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+							(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+						})();
+					</script>
+				{/block:IfDisqusShortname}
+				{block:PostNotes}
+					<div class="golden-section">
+						<div class="golden-section-left"></div>
+						<div class="golden-section-content">
+							<div id="notes">
+								{PostNotes-64}
+							</div>
+						</div>
+						<div class="golden-section-right"></div>
+					</div>
+				{/block:PostNotes}
+				{block:Pagination}
+					<div id="post-nav">
+						{block:NextPage}<p id="previous"><a href="{NextPage}"><img src="http://stevecochrane.com/tumblr/images/page-nav-previous.png" alt="Older entries"></a></p>{/block:NextPage}
+						{block:PreviousPage}<p id="next"><a href="{PreviousPage}"><img src="http://stevecochrane.com/tumblr/images/page-nav-next.png" alt="Newer entries"></a></p>{/block:PreviousPage}
+					</div>
+				{/block:Pagination}
+				{block:PermalinkPagination}
+					<div id="post-nav">
+						{block:NextPost}<p id="next"><a href="{NextPost}"><img src="http://stevecochrane.com/tumblr/images/page-nav-next.png" alt="Next entry"></a></p>{/block:NextPost}
+						{block:PreviousPost}<p id="previous"><a href="{PreviousPost}"><img src="http://stevecochrane.com/tumblr/images/page-nav-previous.png" alt="Previous entry"></a></p>{/block:PreviousPost}
+					</div>
+				{/block:PermalinkPagination}
+			</div>
+			<footer>
+				<div>
+					<div class="golden-section">
+						<div class="golden-section-left"></div>
+						<div class="golden-section-content">
+							<p>Made with <a href="https://atom.io/">Atom</a>. <a href="http://www.typography.com/fonts/sentinel/overview/">Sentinel</a> and <a href="http://www.typography.com/fonts/ideal-sans/overview/">Ideal Sans</a> fonts provided by <a href="http://www.typography.com/cloud/welcome/">Hoefler & Co.</a> Powered by <a href="http://tumblr.com/">Tumblr</a>.<br />Backgrounds <a href="http://stevecochrane.com/tumblr/images/paper.png">1</a> and <a href="http://stevecochrane.com/tumblr/images/red-fabric.png">2</a> modified from originals on <a href="http://subtlepatterns.com">Subtle Patterns</a> under <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons</a> license.<br/>Copyright &copy; {CopyrightYears} <a href="http://stevecochrane.com">Steve Cochrane</a> unless otherwise noted. All rights reserved.</p>
+						</div>
+						<div class="golden-section-right"></div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<script id="dsq-count-scr" src="//stevecochrane.disqus.com/count.js" async></script>
+		<!-- Google Analytics -->
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-23677473-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+		<!-- End Google Analytics -->
+	</body>
 </html>

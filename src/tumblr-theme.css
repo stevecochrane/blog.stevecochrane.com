@@ -117,9 +117,10 @@ a {
 	border-bottom: 1px solid rgba(248,56,0,0.35);
 	color: #f83800; /* NES palette YEAH */
 	text-decoration: none;
-	-webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
-	-moz-transition: background-color 0.2s, border 0.2s, color 0.2s;
-	transition: background-color 0.2s, border 0.2s, color 0.2s;
+	transition:
+		background-color 0.2s,
+		border 0.2s,
+		color 0.2s;
 }
 
 a:hover,
@@ -169,18 +170,14 @@ header > span span {
 
 footer > div,
 header > span span {
-	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.35)), to(transparent));
-	background-image: -moz-linear-gradient(top, rgba(0,0,0,0.35), transparent);
+	background-image: linear-gradient(rgba(0,0,0,0.35), transparent);
 	background-position: 100% 0;
 	background-repeat: repeat-x;
-	-webkit-background-size: 100% 0.625em; /* 10 / 16 */
-	-moz-background-size: 100% 0.625em; /* 10 / 16 */
 	background-size: 100% 0.625em; /* 10 / 16 */
 }
 
 header > span span {
-	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0,0,0,0.35)));
-	background-image: -moz-linear-gradient(top, transparent, rgba(0,0,0,0.35));
+	background-image: linear-gradient(to top, rgba(0,0,0,0.35), transparent);
 	background-position: 0 100%;
 }
 
@@ -201,8 +198,6 @@ header > span span {
 	left: 0.833333em; /* 30 / 36 */
 	position: absolute;
 	top: -0.8333333em; /* -30 / 36 */
-	-webkit-transition: top 0.3s;
-	-moz-transition: top 0.3s;
 	transition: top 0.3s;
 	width: 1.722222em; /* 62 / 36 */
 	z-index: 2;
@@ -395,16 +390,12 @@ article h2 {
 }
 
 article img {
-	-webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.35);
-	-moz-box-shadow: 0 2px 6px rgba(0,0,0,0.35);
 	box-shadow: 0 2px 6px rgba(0,0,0,0.35);
 }
 
 pre {
 	/*  pre styles copied from the Twilight theme for TextMate */
 	background: #1a1a1a;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
 	border-radius: 5px;
 	color: #fff;
 	font-size: 1em; /* 16 / 16 */
@@ -463,9 +454,9 @@ pre .type {
 	float: left;
 	margin: 2.5em 1.875em 2.3125em; /* 40 30 37 / 16 */
 	padding-bottom: 1.875em; /* 30 / 16 */
-	-webkit-transition: margin 0.3s, padding 0.3s;
-	-moz-transition: margin 0.3s, padding 0.3s;
-	transition: margin 0.3s, padding 0.3s;
+	transition:
+		margin 0.3s,
+		padding 0.3s;
 }
 
 #next {

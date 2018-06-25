@@ -54,6 +54,39 @@ table {
 
 /*  End reset styles */
 
+@font-face {
+	font-family: "Tofino";
+	font-style: normal;
+	font-weight: 400;
+	src: url("https://stevecochrane.com/webfonts/Tofino-Regular.woff2") format("woff2"),
+	     url("https://stevecochrane.com/webfonts/Tofino-Regular.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Tofino";
+	font-style: italic;
+	font-weight: 400;
+	src: url("https://stevecochrane.com/webfonts/Tofino-RegularItalic.woff2") format("woff2"),
+	     url("https://stevecochrane.com/webfonts/Tofino-RegularItalic.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Tofino";
+	font-style: normal;
+	font-weight: 700;
+	src: url("https://stevecochrane.com/webfonts/Tofino-Bold.woff2") format("woff2"),
+	     url("https://stevecochrane.com/webfonts/Tofino-Bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Tofino";
+	font-style: italic;
+	font-weight: 700;
+	src: url("https://stevecochrane.com/webfonts/Tofino-BoldItalic.woff2") format("woff2"),
+	     url("https://stevecochrane.com/webfonts/Tofino-BoldItalic.woff") format("woff");
+}
+
+
 html {
 	overflow-y: scroll;
 }
@@ -61,7 +94,7 @@ html {
 body {
 	background: #fbf8ef url(images/paper.png);
 	color: rgba(0,0,0,0.75);
-	font: 87.5%/1.875em "Ideal Sans SSm A", "Ideal Sans SSm B", sans-serif; /* 14 / 16, 30 / 16 */
+	font: 87.5%/1.875em "Tofino", sans-serif; /* 14 / 16, 30 / 16 */
 	font-kerning: normal;
 }
 
@@ -72,7 +105,9 @@ body {
 }
 
 h1 {
-	font: bold 2.25em/1.25em "Sentinel A", "Sentinel B", serif; /* 36 / 16, 45 / 36 */
+	font-size: 2.25em; /* 36 / 16 */
+	font-weight: 700;
+	line-height: 1.25em; /* 45 / 36 */
 }
 
 header + img,
@@ -147,7 +182,7 @@ img {
 }
 
 strong {
-	font-weight: bold;
+	font-weight: 700;
 }
 
 code {
@@ -230,7 +265,7 @@ nav ul {
 nav li {
 	float: left;
 	font-size: 0.875em; /* 14 / 16 */
-	font-weight: bold;
+	font-weight: 700;
 	line-height: 2.142857em; /* 30 / 14 */
 	list-style: none;
 	padding-left: 2.142857em; /* 30 / 14 */
@@ -384,7 +419,7 @@ article header li a:focus {
 
 article h2 {
 	font-size: 1.6875em; /* 27 / 16 */
-	font-weight: bold;
+	font-weight: 700;
 	line-height: 1.111111em; /* 30 / 27 */
 	margin-top: 1.666667em; /* 45 / 27 */
 }
